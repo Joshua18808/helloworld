@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(this, "Howdy Honda",Toast.LENGTH_LONG).show();
         Log.i(tag , "next button click");
         Intent colorActivityIntent = new Intent(this, color.class);
+        sendBundle.putString("name", "Fernando");
+        colorActivityIntent.putExtra("groceries", sendBundle);
         startActivity(colorActivityIntent, sendBundle);
 
     }
