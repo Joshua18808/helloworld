@@ -1,5 +1,6 @@
 package com.example.jchuah.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,8 @@ public class color extends AppCompatActivity {
 
     public void onColorClick (View Button){
         Toast.makeText(this, "Howdy Honda", Toast.LENGTH_LONG).show();
+        Intent finalActivityinent = new Intent(this, finalactivity.class );
+        startActivity(finalActivityinent);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Intent colorActivityIntent = new Intent(this, color.class);
         sendBundle.putString("name", "Fernando");
         colorActivityIntent.putExtra("groceries", sendBundle);
-        startActivity(colorActivityIntent, sendBundle);
+        startActivity(colorActivityIntent);
 
     }
 
