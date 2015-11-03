@@ -33,7 +33,7 @@
         android:inputType="textPersonName"
         android:text="Enter Name Here"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/username"
         android:textColor="#aaeedd"
         android:singleLine="false"
         android:layout_centerVertical="true"

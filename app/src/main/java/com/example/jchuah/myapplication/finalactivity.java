@@ -2,16 +2,20 @@ package com.example.jchuah.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class finalactivity extends AppCompatActivity {
-
+    Bundle groceries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
+        groceries = getIntent().getBundleExtra(("groceries"));
+        Log.i("GROCERIES", groceries.getString("name"));
+
     }
 
     @Override

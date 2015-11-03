@@ -1,6 +1,7 @@
 package com.example.jchuah.myapplication;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,9 +14,16 @@ import android.widget.Toast;
 public class color extends AppCompatActivity {
     Bundle groceries;
 
-    public void onColorClick (View Button){
+    public void onColorClick (View source){
         Toast.makeText(this, "Howdy Honda", Toast.LENGTH_LONG).show();
         Intent finalActivityinent = new Intent(this, finalactivity.class );
+        finalActivityinent.putExtra("groceries", groceries);
+        Button colorButton = (Button)source;
+        ColorDrawable bgColor = (ColorDrawable)source.getBackground();
+        groceries.putInt("colorclick", bgColor.getColor());
+
+
+
         startActivity(finalActivityinent);
     }
     @Override

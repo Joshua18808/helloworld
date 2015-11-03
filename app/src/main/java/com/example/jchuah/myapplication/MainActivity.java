@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(this, "Howdy Honda",Toast.LENGTH_LONG).show();
         Log.i(tag , "next button click");
         Intent colorActivityIntent = new Intent(this, color.class);
-        sendBundle.putString("name", "Fernando");
+        EditText e = (EditText)findViewById(R.id.username);
+        sendBundle.putString("name", e.getText().toString());
         colorActivityIntent.putExtra("groceries", sendBundle);
         startActivity(colorActivityIntent);
 
