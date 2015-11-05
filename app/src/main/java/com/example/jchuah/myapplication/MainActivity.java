@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Bundle sendBundle = new Bundle();
+    Bundle grocery = new Bundle();
     static String tag = "com.example.jchuah.myapplication.MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Log.i(tag , "next button click");
         Intent colorActivityIntent = new Intent(this, color.class);
         EditText e = (EditText)findViewById(R.id.username);
-        sendBundle.putString("name", e.getText().toString());
-        colorActivityIntent.putExtra("groceries", sendBundle);
+        grocery.putString("name", e.getText().toString());
+        colorActivityIntent.putExtra("groceries", grocery);
         startActivity(colorActivityIntent);
 
     }

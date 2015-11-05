@@ -16,15 +16,15 @@ public class color extends AppCompatActivity {
 
     public void onColorClick (View source){
         Toast.makeText(this, "Howdy Honda", Toast.LENGTH_LONG).show();
-        Intent finalActivityinent = new Intent(this, finalactivity.class );
-        finalActivityinent.putExtra("groceries", groceries);
+        Intent finalactivity = new Intent(this, finalactivity.class );
+        finalactivity.putExtra("groceries", groceries);
         Button colorButton = (Button)source;
         ColorDrawable bgColor = (ColorDrawable)source.getBackground();
-        groceries.putInt("colorclick", bgColor.getColor());
+        groceries.putInt("colorClick", bgColor.getColor());
 
 
 
-        startActivity(finalActivityinent);
+        startActivity(finalactivity);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
